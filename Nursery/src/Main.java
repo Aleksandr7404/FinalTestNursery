@@ -72,7 +72,7 @@ public class Main {
 
                 }
                 case "3" -> {
-                    System.out.println("Введите имя животного кого хотите обучить");
+                    System.out.println("Введите имя животного для обучения");
                     name_animal = console.nextLine();
                     System.out.println("Введите команду которой нужно обучить животное");
                     new_skill = console.nextLine();
