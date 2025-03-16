@@ -61,7 +61,7 @@ public class Main {
 
                 }
                 case "2" -> {
-                    System.out.println("Введите имя животного чьи способности Вас интересуют");
+                    System.out.println("Введите имя животного для проверки способностей");
                     name_animal = console.nextLine();
                     try {
                         animalRegistryService.get_command_animal(name_animal);
@@ -89,7 +89,7 @@ public class Main {
                 }
                 case "5" -> {
                     String by = "До свидания";
-                    System.out.println("\n" + by.toUpperCase());
+                    System.out.println("\n" + by);
                     obs = false;
                 }
 
