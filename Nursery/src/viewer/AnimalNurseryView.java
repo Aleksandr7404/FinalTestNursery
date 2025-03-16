@@ -3,8 +3,6 @@ package viewer;
 import models.Animal;
 import presenter.View;
 import presenter.ViewObserver;
-
-import java.util.ArrayList;
 import java.util.Collection;
 
 public class AnimalNurseryView implements View {
@@ -21,9 +19,6 @@ public class AnimalNurseryView implements View {
     }
 
     public void setObserver(ViewObserver observer){this.observer = observer;}
-
-
-
 
     public void getanimla(String name, String birthday, double weight, String type){
         this.observer.onGetAnimal(name,birthday,weight, type);

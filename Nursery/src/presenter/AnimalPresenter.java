@@ -1,7 +1,6 @@
 package presenter;
 
 import models.Animal;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -29,7 +28,6 @@ public class AnimalPresenter implements ViewObserver {
         this.animalServserse.get_new_animal(name,birthday,weight,type);
 
     }
-
 
 
     @Override
