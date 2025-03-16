@@ -34,7 +34,7 @@ public class Main {
                 case "1" -> {
                     System.out.println("Для этого вам необоходимо ввести " +
                             "имя животного дату его рождения " +
-                            "вес животного в также а также род животного ");
+                            "вес и род животного ");
                     System.out.println("Введите имя животного: ");
                     name_animal = console.nextLine();
                     try {
@@ -51,7 +51,7 @@ public class Main {
                         }
                     }
                     catch (Exception e){
-                        System.out.println("Данные введеные не верно");
+                        System.out.println("Данные введены не верно");
                     }
                     finally {
                         System.out.println("Повторите ввод");
@@ -67,7 +67,7 @@ public class Main {
                         animalRegistryService.get_command_animal(name_animal);
                     }
                     finally {
-                        System.out.println("К сожалению в нашем питомнике нет токого животного");
+                        System.out.println("К сожалению в нашем питомнике нет такого животного");
                     }
 
                 }
