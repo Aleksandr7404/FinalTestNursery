@@ -49,8 +49,6 @@ public class Main {
                         else {
                             System.out.println("Вы ввели не коректные данные повторите ввод");
                         }
-
-
                     }
                     catch (Exception e){
                         System.out.println("Данные введеные не верно");
@@ -59,9 +57,7 @@ public class Main {
                         System.out.println("Повторите ввод");
                     }
 
-
                     animalNurseryView.getanimla(name_animal,birthday,weight,type_animal);
-
 
                 }
                 case "2" -> {
@@ -74,12 +70,11 @@ public class Main {
                         System.out.println("К сожалению в нашем питомнике нет токого животного");
                     }
 
-
                 }
                 case "3" -> {
                     System.out.println("Введите имя животного кого хотите обучить");
                     name_animal = console.nextLine();
-                    System.out.println("Введите команду которой нужну обучить животное");
+                    System.out.println("Введите команду которой нужно обучить животное");
                     new_skill = console.nextLine();
                     try {
                         animalRegistryService.learn_command_animal(name_animal,new_skill);
