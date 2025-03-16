@@ -82,9 +82,9 @@ CREATE TABLE hamsters
     Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO hamsters (Name, Birthday, Commands, Genus_id)
-VALUES ('Малой', '2020-10-12', '', 3),
-('Медведь', '2021-03-12', 'атака сверху', 3),  
-('Бурый', '2022-05-10', '', 3);
+VALUES ('Бонни', '2012-07-07', '', 3),
+('Пухлик', '2012-07-11', '', 3),  
+('Дейл', '2012-06-06', '', 3);
 
 CREATE TABLE horses 
 (       
