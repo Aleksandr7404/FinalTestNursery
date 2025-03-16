@@ -1,6 +1,6 @@
-import org.example.models.AnimalRegistryService;
-import org.example.presenter.AnimalPresenter;
-import org.example.viewer.AnimalNurseryView;
+import models.AnimalRegistryService;
+import presenter.AnimalPresenter;
+import viewer.AnimalNurseryView;
 
 import java.util.Scanner;
 
@@ -10,14 +10,14 @@ public class Main {
 
     public static void main(String[] args){
         Scanner console = new Scanner(System.in);
-        System.out.println("Риест домашних животных");
+        System.out.println("Учет домашних животных");
         AnimalRegistryService animalRegistryService = new AnimalRegistryService();
         AnimalNurseryView animalNurseryView = new AnimalNurseryView();
         new AnimalPresenter(animalRegistryService,animalNurseryView);
         boolean obs = true;
         while (obs){
             System.out.println("""
-                    Что желаете
+                    Выберите пункт меню
                     1 - Завести новое животное
                     2 - Увидеть список команд, которое выполняет животное
                     3 - Обучить животное новым командам
@@ -85,7 +85,7 @@ public class Main {
                         animalRegistryService.learn_command_animal(name_animal,new_skill);
                     }
                     finally {
-                        System.out.println("К сожалению в нашем питомнике нет токого животного");
+                        System.out.println("К сожалению в нашем питомнике нет такого животного");
                     }
 
                 }

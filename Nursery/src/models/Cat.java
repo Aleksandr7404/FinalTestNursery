@@ -1,17 +1,22 @@
-package Model;
+package models;
 
 import java.util.ArrayList;
 
-public class Dog extends Pet{
+public class Cat extends Pet{
 
 
-    public Dog(String name, String birthday, double weight, String type) {
+    public Cat(String name, String birthday, double weight, String type) {
         super(name, birthday, weight, type);
     }
 
+
     @Override
     public ArrayList<String> getCommand_animal() {
-        command_animal.add("Storage");
+        command_animal.add("Climb");
         return command_animal;
     }
+
+
+
+
 }

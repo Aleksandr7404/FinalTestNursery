@@ -1,6 +1,6 @@
-package Model;
+package models;
 
-import org.example.presenter.Model;
+import presenter.Model;
 
 import java.util.ArrayList;
 import java.util.Collection;
