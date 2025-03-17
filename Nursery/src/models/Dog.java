@@ -11,7 +11,7 @@ public class Dog extends Pet{
 
     @Override
     public ArrayList<String> getCommand_animal() {
-        command_animal.add("Storage");
+        command_animal.add("Охранять");
         return command_animal;
     }
 }

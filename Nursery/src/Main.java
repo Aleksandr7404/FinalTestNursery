@@ -1,7 +1,6 @@
 import models.AnimalRegistryService;
 import presenter.AnimalPresenter;
 import viewer.AnimalNurseryView;
-
 import java.util.Scanner;
 
 public class Main {
@@ -10,16 +9,16 @@ public class Main {
 
     public static void main(String[] args){
         Scanner console = new Scanner(System.in);
-        System.out.println("Учет домашних животных");
+        System.out.println("\n      Учет домашних животных");
         AnimalRegistryService animalRegistryService = new AnimalRegistryService();
         AnimalNurseryView animalNurseryView = new AnimalNurseryView();
         new AnimalPresenter(animalRegistryService,animalNurseryView);
         boolean obs = true;
         while (obs){
             System.out.println("""
-                    Выберите пункт меню
+                    \nВыберите пункт меню
                     1 - Завести новое животное
-                    2 - Увидеть список команд, которое выполняет животное
+                    2 - Увидеть список команд, которые выполняет животное
                     3 - Обучить животное новым командам
                     4 - Вывести всеx животных питомника
                     5 - Выйти
@@ -32,32 +31,28 @@ public class Main {
             String new_skill = null;
             switch (choice){
                 case "1" -> {
-                    System.out.println("Для этого вам необоходимо ввести " +
-                            "имя животного дату его рождения " +
+                    System.out.println("Для этого вам необоходимо ввести имя животного, дату его рождения, " +
                             "вес и род животного ");
                     System.out.println("Введите имя животного: ");
                     name_animal = console.nextLine();
                     try {
                         System.out.println("Введите дату рождения животного в формате (2022-01-10): ");
-                        if(console.nextLine().length() == 10){
-                            birthday = console.nextLine();
+                        birthday = console.nextLine();
+                        if(birthday.length() == 10){
                             System.out.println("Введите вес животного: ");
                             weight = Double.parseDouble(console.nextLine());
                             System.out.println("Введите род животного (Кошка Собака Хомяк Лошадь Верблюд Осёл): ");
                             type_animal = console.nextLine();
                         }
                         else {
-                            System.out.println("Вы ввели не коректные данные повторите ввод");
+                            System.out.println("Неправильный формат даты, повторите ввод");
                         }
                     }
                     catch (Exception e){
-                        System.out.println("Данные введены не верно");
-                    }
-                    finally {
-                        System.out.println("Повторите ввод");
+                        System.out.println("Данные введены неверно, повторите ввод");
                     }
 
-                    animalNurseryView.getanimla(name_animal,birthday,weight,type_animal);
+                    animalNurseryView.getanimal(name_animal,birthday,weight,type_animal);
 
                 }
                 case "2" -> {
@@ -66,7 +61,7 @@ public class Main {
                     try {
                         animalRegistryService.get_command_animal(name_animal);
                     }
-                    finally {
+                    catch (Exception e){
                         System.out.println("К сожалению в нашем питомнике нет такого животного");
                     }
 
@@ -79,7 +74,7 @@ public class Main {
                     try {
                         animalRegistryService.learn_command_animal(name_animal,new_skill);
                     }
-                    finally {
+                    catch (Exception e){
                         System.out.println("К сожалению в нашем питомнике нет такого животного");
                     }
 

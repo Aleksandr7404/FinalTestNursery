@@ -27,7 +27,6 @@ public class AnimalRegistryService implements Model {
             animalRegists.add(animal);
             assert animal != null;
             count.add_count();
-
     }
 
     public ArrayList<Animal> load_animal() {
@@ -49,10 +48,8 @@ public class AnimalRegistryService implements Model {
         for (Animal animal : this.animalRegists){
             if(Objects.equals(name, animal.getName())){
                 animal.add_command_animal(command);
-                System.out.println("Skill Learn");
+                System.out.println("Новая команда");
             }
         }
     }
-
-
 }

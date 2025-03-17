@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class Animal {
 
-  // region Field
+
     private final int id;
     private static int counter = 0;
 
@@ -17,9 +17,7 @@ public class Animal {
 
     protected final ArrayList<String> command_animal;
 
-  // endregion
 
-  // region Setter and Getter
     public String getName() {
         return name;
     }
@@ -51,24 +49,21 @@ public class Animal {
         this.birthday = birthday;
         this.weight = weight;
         this.type = type;
-        this.command_animal = new ArrayList<>(Arrays.asList("Run", "Jump", "Eat", "Voice"));
+        this.command_animal = new ArrayList<>(Arrays.asList("Бежать", "Есть", "Голос"));
 
         this.id = ++counter;
     }
-    // endregion
 
-
-    // region Public Method
     public int getId(){ return this.id; }
 
     public String toString(){
         return  String.format(
                 Locale.getDefault(),
                 """
-                        Name animal: %s\s
-                        Age animal: %s\s
-                        Weight animal: %.2f кг \s
-                        Genus animal: %s\s
+                        Имя: %s\s
+                        День рождения: %s\s
+                        Вес: %.2f кг \s
+                        Род: %s\s
                         """,
                 this.name,this.birthday, this.weight, this.type);}
 
@@ -81,7 +76,6 @@ public class Animal {
         command_animal.add(command);
     }
 
-    //endregion
 
 
 }

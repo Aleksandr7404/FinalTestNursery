@@ -20,7 +20,7 @@ public class AnimalNurseryView implements View {
 
     public void setObserver(ViewObserver observer){this.observer = observer;}
 
-    public void getanimla(String name, String birthday, double weight, String type){
+    public void getanimal(String name, String birthday, double weight, String type){
         this.observer.onGetAnimal(name,birthday,weight, type);
     }
 

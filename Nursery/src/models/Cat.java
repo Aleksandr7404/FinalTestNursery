@@ -12,7 +12,7 @@ public class Cat extends Pet{
 
     @Override
     public ArrayList<String> getCommand_animal() {
-        command_animal.add("Climb");
+        command_animal.add("Брысь");
         return command_animal;
     }
 
